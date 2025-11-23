@@ -51,11 +51,10 @@ namespace CalculatorApp
             calendar.ChangeCalendarSystem(CalendarIdentifiers.Gregorian);
             calendar.Day = 1;
             calendar.Month = 1;
-            calendar.Year = c_minYear;
-            var minYear = calendar.GetDateTime(); // 1st January, 1601
+            calendar.Year = 1970;
+            var minYear = calendar.GetDateTime(); // Unix epoch
             DateDiff_FromDate.MinDate = minYear;
             DateDiff_ToDate.MinDate = minYear;
-
             calendar.Day = 31;
             calendar.Month = 12;
             calendar.Year = c_maxYear;
