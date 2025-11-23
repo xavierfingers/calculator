@@ -2,9 +2,8 @@
 // Licensed under the MIT License.
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Windows;
-
 using System.Drawing;
-
+using System;
 namespace CalculatorUITestFramework
 {
     /// <summary>
@@ -72,7 +71,9 @@ namespace CalculatorUITestFramework
                 //give window time to render new size
                 System.Threading.Thread.Sleep(10);
                 GrowWindowToShowDock(width + 100);
-            }
+            } else {
+            throw new NotFoundException("Error: DockPanel not found.");
+         }
         }
     }
 
