@@ -1,11 +1,9 @@
 name: Windows Calculator Continuous Integration Pipeline
 run-name: WinCalc-CI-0.${{ github.run_number }}
 on:
-  push:
-    branches: [main, release/**, feature/**]
-  pull_request:
-    branches: [main, release/**, feature/**]
-  workflow_dispatch:
+  - push
+  - pull_request
+  - workflow_dispatch
 jobs:
   defineBuilds:
     name: Define builds
