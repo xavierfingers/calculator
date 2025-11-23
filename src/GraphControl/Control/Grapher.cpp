@@ -5,7 +5,7 @@
 #include "Grapher.h"
 #include "IBitmap.h"
 #include "../../CalcViewModel/GraphingCalculatorEnums.h"
-
+#include <iostream>
 using namespace Graphing;
 using namespace GraphControl;
 using namespace GraphControl::DX;
@@ -216,8 +216,9 @@ namespace GraphControl
         if (equation->HasGraphError || equation->Expression->IsEmpty())
         {
             return;
-        }
+        } else  {
         bool keepCurrentView = true;
+      }
 
         // If the equation has changed, the IsLineEnabled state is reset.
         // This checks if the equation has been reset and sets keepCurrentView to false in this case.
