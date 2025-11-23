@@ -49,8 +49,7 @@ namespace CalculatorApp
 
         private void SubscribePropertyChanged()
         {
-            if (Model != null)
-            {
+            if (Model != null) {
                 Model.PropertyChanged += OnPropertyChanged;
                 m_currentValueBitLength = Model.ValueBitLength;
                 UpdateCheckedStates(true);
