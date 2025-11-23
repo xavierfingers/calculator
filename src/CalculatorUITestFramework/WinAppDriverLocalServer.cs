@@ -7,13 +7,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-
 namespace CalculatorUITestFramework
 {
     public class WinAppDriverLocalServer : IDisposable
     {
         private const int WinAppDriverDefaultPort = 4723;
-        private static readonly IPAddress WinAppDriverDefaultIp = IPAddress.Loopback;
+        private const readonly IPAddress WinAppDriverDefaultIp = IPAddress.Loopback;
 
         private readonly Process winAppDriverProcess;
         private bool processExited = false;
